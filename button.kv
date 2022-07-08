@@ -1,0 +1,42 @@
+#:import os os
+<MyLayout>
+
+    BoxLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
+
+        padding: 30
+        spacing: 10
+
+        
+
+        Button:
+            background_normal: 'img/snake.jpg'
+            size_hint: 0.5, 0.3
+            pos_hint: {"centre_x":0.3, "top":0.7}
+            on_press: os.system('python3 snake/snake.py')
+
+        
+
+        Button:
+            background_normal: 'img/unnamed.png'
+            size_hint: 0.6, 0.35
+            pos: 40, 40
+            on_press: os.system('python3 minesweeper/main.py')
+
+            
+
+        Button:
+            background_normal: 'img/pong.png'
+            size_hint: 0.5, 0.3
+            pos_hint: {"x":0, "top":0.85}
+            on_press: os.system('python3 pong/pong.py')
+
+        Button:
+            background_normal: 'img/flappybird.jpg'
+            # Giving size hint i.e size of button is
+            # 40 % by height and 50 % width of layout .
+            size_hint: 0.5, 0.4
+            pos_hint: {"x":.4, "top":0.7}
+            on_press: os.system('python3 flappybird/flappy.py')
+
